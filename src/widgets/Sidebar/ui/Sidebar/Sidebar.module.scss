@@ -1,14 +1,26 @@
 .sidebar {
-	padding: 10px;
-	width: max-content;
 	height: calc(100vh - var(--navbar-height));
-	background-color: var(--inverted-bg-color);
-	position: revert;
+	width: var(--sidebar-width);
+	background: var(--inverted-bg-color);
+	
+	position: relative;
+	transition: width 0.3s;
+	
+	&.collapsed {
+		width: var(--sidebar-width-collapsed);
+	}
+}
+
+.switcher {
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	
 }
-	.sidebar.collapsed {
-		width: 30vw;
-	}
+
 
 
 

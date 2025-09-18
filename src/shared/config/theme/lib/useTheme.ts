@@ -1,9 +1,11 @@
 import { useContext } from 'react'
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './themeContext'
 
+export type ToggleTheme = () => void
+
 interface useThemeResult {
 	theme: Theme
-	toggleTheme: () => void
+	toggleTheme: ToggleTheme
 }
 
 export function useTheme (): useThemeResult  {
