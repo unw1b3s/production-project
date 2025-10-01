@@ -1,0 +1,15 @@
+{
+  "title": "Добро пожаловать в react с помощью react-i18next",
+  "translation button": "Перевод",
+  "navbar": {
+    "main": "Главная",
+    "about": "О сайте"
+  },
+  "pages": {
+    "main": "Главная страница:",
+    "about": "О проекте"
+  },
+  "sidebar": {
+    "toggle": "toggle"
+  }
+}
