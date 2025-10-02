@@ -1,4 +1,4 @@
-import { ThemeButton } from './Button'
-import Button from './Button'
+import {ThemeButton} from './Button';
+import Button from './Button';
 
-export { ThemeButton, Button }
+export {ThemeButton, Button};

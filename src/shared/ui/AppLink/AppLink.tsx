@@ -15,15 +15,15 @@ interface AppLinkProps extends LinkProps {
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
-	const {
-		to,
-		className,
-		children,
-		theme = AppLinkTheme.PRIMARY,
-		...otherProps
-	} = props;
+  const {
+    to,
+    className,
+    children,
+    theme = AppLinkTheme.PRIMARY,
+    ...otherProps
+  } = props;
 	
-	return (
+  return (
 		<Link
 			to={to}
 			className={classNames(cls.appLink, {[cls[theme]]: true}, [className])}
@@ -31,6 +31,6 @@ export const AppLink: FC<AppLinkProps> = (props) => {
 		>
 			{children}
 		</Link>
-	);
+  );
 };
 

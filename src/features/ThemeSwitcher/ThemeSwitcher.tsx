@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import type { ReactNode } from 'react'
+// import type { ReactNode } from 'react'
 import { DarkIcon, LightIcon } from 'shared/assets/icons'
 import { Theme } from 'shared/config/theme'
 import {useTheme } from 'shared/config/theme/lib/useTheme'
@@ -11,9 +11,9 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
-	const {theme, toggleTheme} = useTheme()
-	
-	return (
+  const {theme, toggleTheme} = useTheme()
+
+  return (
 		    <Button
 			    className={classNames(cls.themeSwitcher, className)}
 			    theme={ThemeButton.CLEAR}
@@ -21,5 +21,5 @@ export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
 		    >
 			    {theme === Theme.LIGHT ? <LightIcon/> : <DarkIcon/> }
 		    </Button>
-    );
+  );
 };

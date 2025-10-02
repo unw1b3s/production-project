@@ -9,18 +9,18 @@ interface ThemeProviderProps {
 }
 
 export function ThemeProvider ({children}: ThemeProviderProps) {
-	const [theme, setTheme] = useState<Theme>(defaultTheme)
+  const [theme, setTheme] = useState<Theme>(defaultTheme)
 	
-	const defaultProps = useMemo(() => ({
-		theme: theme,
-		setTheme: setTheme
-	}), [theme])
+  const defaultProps = useMemo(() => ({
+    theme: theme,
+    setTheme: setTheme
+  }), [theme])
 	
-	return (
+  return (
 		<ThemeContext.Provider value={defaultProps}>
 			{children}
 		</ThemeContext.Provider>
-	)
+  )
 }
 
 

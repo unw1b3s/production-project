@@ -1,5 +1,5 @@
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
-import { type ReactNode, useState } from 'react'
+import { ReactNode, useState } from 'react'
 import classNames from 'classnames';
 import { DarkIcon, LightIcon } from 'shared/assets/icons'
 import { Theme, useTheme } from 'shared/config/theme'
@@ -14,22 +14,22 @@ interface SidebarProps {
 }
 
 const Sidebar = (props: SidebarProps) => {
-const {
-		className,
-		children,
-		...otherProps
-	} = props
-	const { t } = useTranslation();
-	const [collapsed, setCollapsed] = useState(false)
+  const {
+    className,
+    children,
+    ...otherProps
+  } = props
+  const { t } = useTranslation();
+  const [collapsed, setCollapsed] = useState(false)
 
-	const onToggle = () => {
-		setCollapsed(prev => !prev)
-	}
+  const onToggle = () => {
+    setCollapsed(prev => !prev)
+  }
 
-	return (
+  return (
 				<div
 				className={classNames(className, cls.sidebar, {
-					[cls.collapsed]: collapsed
+				  [cls.collapsed]: collapsed
 				})}
 					{...otherProps}
 				>
@@ -44,7 +44,7 @@ const {
 					</div>
 
         </div>
-    );
+  );
 };
 
 export default Sidebar;
