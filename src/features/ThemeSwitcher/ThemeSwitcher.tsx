@@ -1,5 +1,4 @@
 import classNames from 'classnames'
-// import type { ReactNode } from 'react'
 import { DarkIcon, LightIcon } from 'shared/assets/icons'
 import { Theme } from 'shared/config/theme'
 import {useTheme } from 'shared/config/theme/lib/useTheme'

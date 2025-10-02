@@ -1,4 +1,4 @@
-import {defineConfig} from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
@@ -21,16 +21,24 @@ export default defineConfig([
       ecmaVersion: 'latest',
       sourceType: 'module',
       parserOptions: { ecmaFeatures: { jsx: true } },
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        '__IS_DEV__': true,
+        '__dirname': true
+      },
     },
     plugins: {js},
     settings: {
       react: { version: 'detect' },
     },
     rules: {
-      'no-unused-vars': 'off',
+      'no-unused-vars': 'warn', // «неиспользуемые переменные»
       '@typescript-eslint/no-unused-vars': 'off',
-      'no-undef': 'warn',
-    }
+      'no-undef': 'warn', // об использовании переменных, которые нигде не объявлены
+			'eqeqeq': 'error', // Требует использования строгого равенства === вместо ==
+			'no-console': 'warn', // Предупреждение при использовании console.log
+			'curly': 'error', // Обязывает использовать фигурные скобки для всех блоков
+			'react/prop-types': 'off', // Отключает проверку типов props, если используешь TypeScript
+		},
   }
 ]);
